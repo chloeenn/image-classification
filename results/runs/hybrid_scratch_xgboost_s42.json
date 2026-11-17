@@ -1,0 +1,57 @@
+{
+ "run_id": "hybrid_scratch_xgboost_s42",
+ "phase": "hybrid",
+ "model": "hybrid_scratch+xgboost",
+ "seed": 42,
+ "input_res": 32,
+ "best_val_acc": 0.8792,
+ "val_loss": 0.4002982974052429,
+ "best_params": {
+  "max_depth": 8,
+  "learning_rate": 0.05
+ },
+ "fit_time_s": 28.49430812499486,
+ "feature_dim": 128,
+ "git_commit": "none",
+ "params": 1672010,
+ "weights": "models/hybrid_scratch_xgboost_s42/model.pt",
+ "clf": "models/hybrid_scratch_xgboost_s42/clf.joblib",
+ "config": {
+  "name": "hybrid_scratch",
+  "phase": "hybrid",
+  "model": "scratch",
+  "source_run": "scratch_adam_lr0.001_bs128_cosine_e30_s{seed}",
+  "seed": 42,
+  "res": 32,
+  "norm": "cifar",
+  "heads": [
+   "logreg",
+   "xgboost"
+  ],
+  "logreg_c": [
+   0.01,
+   0.1,
+   1,
+   10
+  ],
+  "max_iter": 1000,
+  "xgb_grid": {
+   "max_depth": [
+    4,
+    6,
+    8
+   ],
+   "learning_rate": [
+    0.05,
+    0.1
+   ]
+  },
+  "xgb_device": "cpu",
+  "xgb_rounds": 300,
+  "xgb_patience": 20,
+  "source_weights": "models/scratch_adam_lr0.001_bs128_cosine_e30_s42/best.pt"
+ },
+ "latency_b1_cpu_ms": 3.9720776660833508,
+ "latency_b1_mps_ms": 8.072193500120193,
+ "throughput_b128_img_s": 1825.9512862868696
+}

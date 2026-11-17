@@ -1,0 +1,40 @@
+# data and weights
+data/
+models/
+*.pt
+*.pth
+*.npy
+!results/val_idx.npy
+*.pkl
+*.joblib
+*.ckpt
+
+# dummy, scratch and temporary files
+tmp/
+scratch/
+dummy*
+fake*
+sample_data/
+*.tmp
+*.bak
+*.log
+.DS_Store
+
+# experiment output
+runs/
+!results/runs/
+lightning_logs/
+wandb/
+results/runs/*.tmp
+results/runs/smoke*
+
+# python and tools
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+.vulture_cache/
+.mypy_cache/
+.env

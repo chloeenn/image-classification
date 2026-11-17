@@ -1,0 +1,12 @@
+name: scratch_sgdm
+phase: sgdm
+model: scratch
+optimizer: sgd
+momentum: 0.9
+lr: 0.01
+batch_size: 128
+epochs: 30
+schedule: cosine
+seed: 42
+res: 32
+norm: cifar

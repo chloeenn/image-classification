@@ -1,0 +1,18 @@
+repos:
+  - repo: local
+    hooks:
+      - id: fix
+        name: make fix
+        entry: make fix
+        language: system
+        pass_filenames: false
+      - id: prose
+        name: make prose
+        entry: make prose
+        language: system
+        pass_filenames: false
+      - id: nbstripout
+        name: clear notebook outputs
+        entry: nbstripout
+        language: system
+        files: \.ipynb$

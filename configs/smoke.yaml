@@ -1,0 +1,11 @@
+name: smoke
+phase: smoke
+model: scratch
+optimizer: adam
+lr: 0.001
+batch_size: 128
+epochs: 1
+seed: 42
+res: 32
+norm: cifar
+subset: 1024

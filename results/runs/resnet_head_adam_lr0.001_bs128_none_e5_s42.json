@@ -1,0 +1,71 @@
+{
+ "run_id": "resnet_head_adam_lr0.001_bs128_none_e5_s42",
+ "phase": "transfer",
+ "model": "resnet18",
+ "optimizer": "adam",
+ "lr": 0.001,
+ "batch_size": 128,
+ "epochs": 5,
+ "seed": 42,
+ "input_res": 224,
+ "best_val_acc": 0.8722000122070312,
+ "best_epoch": 5,
+ "train_time_s": 689.1399214569246,
+ "history": {
+  "train_loss": [
+   0.7307486269632976,
+   0.45443402320543924,
+   0.4186913153913286,
+   0.4024641665670607,
+   0.3890690568976932
+  ],
+  "train_acc": [
+   0.7809111111111111,
+   0.8487555555555556,
+   0.8559777777777777,
+   0.8620666666666666,
+   0.8659555555555556
+  ],
+  "val_loss": [
+   0.44485586881637573,
+   0.39490020275115967,
+   0.38105329871177673,
+   0.3672483265399933,
+   0.3679874539375305
+  ],
+  "val_acc": [
+   0.848800003528595,
+   0.8626000285148621,
+   0.866599977016449,
+   0.8709999918937683,
+   0.8722000122070312
+  ],
+  "epoch_time_s": [
+   138.31303587497678,
+   138.04174925002735,
+   137.6654870409984,
+   137.53216983296443,
+   137.58747945795767
+  ]
+ },
+ "git_commit": "none",
+ "params": 11181642,
+ "weights": "models/resnet_head_adam_lr0.001_bs128_none_e5_s42/best.pt",
+ "config": {
+  "name": "resnet_head",
+  "phase": "transfer",
+  "model": "resnet18",
+  "pretrained": true,
+  "freeze_backbone": true,
+  "optimizer": "adam",
+  "lr": 0.001,
+  "batch_size": 128,
+  "epochs": 5,
+  "schedule": "none",
+  "seed": 42,
+  "res": 224,
+  "norm": "imagenet",
+  "amp": true
+ },
+ "device": "mps"
+}

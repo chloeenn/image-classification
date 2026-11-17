@@ -1,0 +1,21 @@
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["notebooks"]
+
+[tool.ruff.lint]
+select = ["F", "ERA", "C90", "B", "UP", "SIM", "I", "T20", "PLR0915"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.pylint]
+max-statements = 40
+
+[tool.vulture]
+paths = ["src", "tests", "app.py"]
+min_confidence = 80
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

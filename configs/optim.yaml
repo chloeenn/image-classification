@@ -1,0 +1,11 @@
+name: optim
+phase: optim
+model: scratch
+optimizer: adam
+lr: 0.001
+batch_size: 128
+epochs: 10
+schedule: none
+seed: 42
+res: 32
+norm: cifar

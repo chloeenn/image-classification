@@ -1,0 +1,16 @@
+name: resnet_ft
+phase: transfer
+model: resnet18
+pretrained: true
+freeze_backbone: false
+init_from: resnet_head_adam_lr0.001_bs128_none_e5_s{seed}
+optimizer: adam
+lr: 0.0001
+head_lr: 0.001
+batch_size: 64
+epochs: 10
+schedule: cosine
+seed: 42
+res: 224
+norm: imagenet
+amp: true

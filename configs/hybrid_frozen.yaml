@@ -1,0 +1,17 @@
+name: hybrid_frozen
+phase: hybrid
+model: resnet18
+pretrained: true
+freeze_backbone: true
+seed: 42
+res: 224
+norm: imagenet
+heads: [logreg, xgboost]
+logreg_c: [0.01, 0.1, 1, 10]
+max_iter: 1000
+xgb_grid:
+  max_depth: [4, 6, 8]
+  learning_rate: [0.05, 0.1]
+xgb_device: cpu
+xgb_rounds: 300
+xgb_patience: 20

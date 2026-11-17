@@ -1,0 +1,14 @@
+name: resnet_head
+phase: transfer
+model: resnet18
+pretrained: true
+freeze_backbone: true
+optimizer: adam
+lr: 0.001
+batch_size: 128
+epochs: 5
+schedule: none
+seed: 42
+res: 224
+norm: imagenet
+amp: true
